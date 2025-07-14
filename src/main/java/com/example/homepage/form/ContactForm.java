@@ -1,10 +1,22 @@
 package com.example.homepage.form;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 public class ContactForm {
+    @NotBlank(message = "名前は必須です。")
     private String name;
+
+    @NotBlank(message = "メールアドレスは必須です。")
+    @Email(message = "メールアドレスの形式が正しくありません。")
     private String email;
+
+    @NotBlank(message = "電話番号は必須です。")
     private String phone;
+
+    @NotBlank(message = "メッセージは必須です。")
     private String message;
+
 
     public String getName() {
         return name;

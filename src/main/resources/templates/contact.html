@@ -9,13 +9,21 @@
 
     <form th:action="@{/contact}" th:object="${contactForm}" method="post">
         <label>名前: <input type="text" th:field="*{name}" /></label><br><br>
+        <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+
         <label>メールアドレス: <input type="email" th:field="*{email}" /></label><br><br>
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+
         <label>電話番号: <input type="tel" th:field="*{phone}" /></label><br><br>
+
         <label>メッセージ:<br>
             <textarea th:field="*{message}" rows="5" cols="40"></textarea>
-        </label><br><br>
+        </label>
+        <p th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></p>
+
         <button type="submit">送信</button>
     </form>
+
 
 <br>
 <a th:href="@{/}">トップに戻る</a>
