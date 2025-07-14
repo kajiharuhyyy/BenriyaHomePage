@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせありがとうございます</title>
+</head>
+<body>
+    <h1>お問い合わせありがとうございます</h1>
+    <p>以下の内容で受け付けました:</p>
+
+    <ul>
+      <li><strong>名前:</strong> <span th:text="${name}"></span></li>
+      <li><strong>メール:</strong> <span th:text="${email}"></span></li>
+      <li><strong>電話番号:</strong> <span th:text="${phone}"></span></li>
+      <li><strong>メッセージ:</strong> <span th:text="${message}"></span></li>
+    </ul>
+
+</body>
+</html>

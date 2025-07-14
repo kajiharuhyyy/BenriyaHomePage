@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>テストページ</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>あなたの街の便利屋です。</p>
+
+    <nav>
+      <a th:href="@{/}">Home</a>
+      <a th:href="@{/about}">事業紹介</a>
+      <a th:href="@{/contact}">お問い合わせ</a>
+    </nav>
+</body>
+</html>
