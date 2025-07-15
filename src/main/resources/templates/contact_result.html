@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>お問い合わせありがとうございます</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <h1>お問い合わせありがとうございます</h1>
-    <p>以下の内容で受け付けました:</p>
+    <div class="container mt-5">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">お問い合わせありがとうございます</h2>
+                <p class="text-center">以下の内容で受け付けました。</p>
 
-    <ul>
-      <li><strong>名前:</strong> <span th:text="${name}"></span></li>
-      <li><strong>メール:</strong> <span th:text="${email}"></span></li>
-      <li><strong>電話番号:</strong> <span th:text="${phone}"></span></li>
-      <li><strong>メッセージ:</strong> <span th:text="${message}"></span></li>
-    </ul>
+                <ul class="list-group list-group-flush my-4">
+                    <li class="list-group-item">
+                        <strong>名前：</strong> <span th:text="${name}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>メールアドレス：</strong> <span th:text="${email}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>電話番号：</strong> <span th:text="${phone}"></span>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>メッセージ：</strong><br>
+                        <span th:text="${message}"></span>
+                    </li>
+                </ul>
 
+                <div class="text-center">
+                    <a th:href="@{/}" class="btn btn-primary">トップに戻る</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
