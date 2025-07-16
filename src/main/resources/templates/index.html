@@ -14,41 +14,43 @@
     <div class="container">
         <img th:src="@{/images/hero.png}" alt="便利屋ヒーロー" class="img-fluid mb-4" style="max-height: 400px;">
         <h1 class="display-5 fw-bold">あなたの街のヒーロー</h1>
-        <p class="lead">困ったときは便利屋へ。解決します！</p>
+        <p class="lead">不動産のお悩みから日常生活のお困りごとまですぐに対応します!</p>
         <a th:href="@{/contact}" class="btn btn-primary btn-lg mt-3">お問合せはこちら</a>
     </div>
 </section>
 
 <section class="container my-5">
     <div class="row text-center">
-        <div class="col-md-3">
-            <img src="/images/service1.png" class="service-img mb-3" width="80">
-            <h5>掃除・片付け</h5>
-            <p>お部屋や倉庫の清掃をお任せください。</p>
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title">🏠 不動産に関するご相談</h4><br>
+                    <h5>不動産のお悩み相談してください！</h5><br>
+                    <p class="card-text">
+                        遺品整理、相続相談、空き家の売却、不動産の簡易査定、生前整理、引越しサポートなど。
+                    </p>
+                    <a th:href="@{'/about#real-estate'}" class="btn btn-outline-primary">詳しく見る</a>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3">
-            <img src="/images/service2.png" class="service-img mb-3" width="80">
-            <h5>買い物代行</h5>
-            <p>忙しいあなたの代わりにお使いに行きます。</p>
-        </div>
-        <div class="col-md-3">
-            <img src="/images/service3.png" class="service-img mb-3" width="80">
-            <h5>電球交換</h5>
-            <p>高いところの作業もおまかせ！</p>
-        </div>
-        <div class="col-md-3">
-            <img src="/images/service4.png" class="service-img mb-3" width="80">
-            <h5>お話相手</h5>
-            <p>一人で悩まず、まずはお話ししませんか？</p>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title">👵 高齢者の生活支援</h4><br>
+                    <h5>皆さまの生活をサポートします！</h5><br>
+                    <p class="card-text">
+                        ゴミ出し、電球交換、付き添い、見守り、詐欺防止、スマホ設定、書類整理など軽作業サポート。
+                    </p>
+                    <a th:href="@{'/services#senior-support'}" class="btn btn-outline-success">詳しく見る</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <div class="text-center mt-4">
-    <a th:href="@{/request}" class="btn btn-success btn-lg">まずは資料請求！</a>
-</div>
-<div class="text-center mt-4">
-    <a th:href="@{/contact}" class="btn btn-success btn-lg">依頼はこちらから</a>
+    <a th:href="@{/request}" class="btn btn-success btn-lg me-3" > 🧾まずは資料請求！</a>
+    <a th:href="@{/contact}" class="btn btn-primary btn-lg">📬　依頼はこちらから</a>
 </div>
 
 

@@ -14,16 +14,34 @@
     <p>あなたのお困りごと、まずは相談してください!</p>
 </div>
 
-        <div class="container">
-            <a class="navbar-brand" th:href="@{/}">便利屋ホーム</a>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" th:href="@{/}">トップ</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/about}">事業紹介</a></li>
-                    <li class="nav-item"><a class="nav-link" th:href="@{/contact}">お問い合わせ</a></li>
-                </ul>
-            </div>
-        </div>
+<div class="container my-5">
+
+    <!-- 不動産関連 -->
+    <section id="real-estate" class="mb-5">
+        <h2 class="mb-3">🏠 不動産に関するご相談</h2>
+        <ul>
+            <li>遺品整理の手伝い（仕分け・処分・清掃）</li>
+            <li>相続に関する初期相談（専門家紹介・書類整理）</li>
+            <li>空き家・実家などの売却相談・現地調査サポート</li>
+            <li>不動産の簡易査定・整理・管理支援</li>
+            <li>生前整理・老前整理の相談支援</li>
+            <li>引越し・施設入所に伴う荷物の整理・移動支援</li>
+        </ul>
+    </section>
+
+    <!-- 高齢者支援 -->
+    <section id="senior-support">
+        <h2 class="mb-3">👵 高齢者の日常生活支援</h2>
+        <ul>
+            <li>ゴミ出し・庭掃除・電球交換などの家事代行</li>
+            <li>通院・買い物の付き添い</li>
+            <li>郵便物チェック・不審電話ヒアリング</li>
+            <li>見守り訪問（話し相手）</li>
+            <li>スマホ・テレビ・Wi-Fiの初期設定</li>
+            <li>書類・通帳・写真などの生活書類整理</li>
+        </ul>
+    </section>
+</div>
 
 <div th:replace="fragments/footer :: footer"></div>
 
