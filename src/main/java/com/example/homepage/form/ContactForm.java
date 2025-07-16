@@ -14,6 +14,9 @@ public class ContactForm {
     @NotBlank(message = "電話番号は必須です。")
     private String phone;
 
+    @NotBlank(message = "郵便番号は必須です。")
+    private String postcode;
+
     @NotBlank(message = "メッセージは必須です。")
     private String message;
 
@@ -41,6 +44,10 @@ public class ContactForm {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    public  String getPostcode() { return postcode; }
+
+    public void setPostcode(String postcode) { this.postcode = postcode; }
 
     public String getMessage() {
         return message;

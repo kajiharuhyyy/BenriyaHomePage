@@ -33,6 +33,11 @@
         </div>
 
         <div class="mb-3">
+            <label for="postcode" class="form-label">郵便番号</label>
+            <input type="text" th:field="*{postcode}" class="form-control" id="postcode">
+        </div>
+
+        <div class="mb-3">
             <label for="message" class="form-label">メッセージ</label>
             <textarea th:field="*{message}" class="form-control" id="message" rows="4" required></textarea>
             <div class="text-danger" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></div>
@@ -44,7 +49,7 @@
 <br>
 <a th:href="@{/}">トップに戻る</a>
 
-<div th:replace="fragments/header :: header"></div>
+<div th:replace="fragments/footer :: footer"></div>
 
 </body>
 </html>

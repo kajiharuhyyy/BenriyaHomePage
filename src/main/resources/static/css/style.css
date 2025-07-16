@@ -1,0 +1,21 @@
+/* static/css/style.css */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h1, h5 {
+    color: #333;
+}
+
+.service-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+

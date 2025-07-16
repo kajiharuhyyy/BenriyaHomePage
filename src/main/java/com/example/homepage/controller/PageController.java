@@ -2,6 +2,7 @@ package com.example.homepage.controller;
 
 
 import com.example.homepage.form.ContactForm;
+import com.example.homepage.form.RequestForm;
 import jakarta.validation.Valid;
 import com.example.homepage.service.MailService;
 import org.springframework.stereotype.Controller;
@@ -50,6 +51,7 @@ public class PageController {
         String body = "名前: " + contactForm.getName() + "\n"
                 + "メール: " + contactForm.getEmail() + "\n"
                 + "電話番号: " + contactForm.getPhone() + "\n"
+                + "郵便番号: " + contactForm.getPostcode() + "\n"
                 + "メッセージ:\n" + contactForm.getMessage();
 
         mailService.sendContactMail("kajiharu0921@gmail.com", subject, body);
@@ -57,7 +59,26 @@ public class PageController {
         model.addAttribute("name",contactForm.getName());
         model.addAttribute("email",contactForm.getEmail());
         model.addAttribute("phone",contactForm.getPhone());
+        model.addAttribute("postcode",contactForm.getPostcode());
         model.addAttribute("message",contactForm.getMessage());
         return "contact_result";
+    }
+
+    @GetMapping("/request")
+    public String requestForm(Model model) {
+        model.addAttribute("requestForm", new RequestForm());
+        return "request";
+    }
+
+    @PostMapping("/request")
+    public String submitRequestForm(
+            @ModelAttribute("repuestForm") @Valid RequestForm form,
+            BindingResult bindingResult,
+            Model model) {
+        if (bindingResult.hasErrors()) {
+            return "request";
+        }
+        model.addAttribute("name", form.getName());
+        return "request_result";
     }
 }
