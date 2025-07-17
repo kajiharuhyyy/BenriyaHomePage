@@ -2,48 +2,156 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>事業紹介</title>
+    <title>事業紹介　|  まごころ便</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
 
 <div class="container mt-5">
-    <h1>事業紹介</h1>
-    <p>あなたのお困りごと、まずは相談してください!</p>
+    <h1 class="text-center mb-4">事業紹介</h1>
+    <p class="text-center"><strong>あなたのお困りごと、まずは相談してください!</strong></p>
 </div>
 
-<div class="container my-5">
+<section class="container py-5">
+    <h2 class="text-center mb-4">サービス一覧</h2>
 
-    <!-- 不動産関連 -->
-    <section id="real-estate" class="mb-5">
-        <h2 class="mb-3">🏠 不動産に関するご相談</h2>
-        <ul>
-            <li>遺品整理の手伝い（仕分け・処分・清掃）</li>
-            <li>相続に関する初期相談（専門家紹介・書類整理）</li>
-            <li>空き家・実家などの売却相談・現地調査サポート</li>
-            <li>不動産の簡易査定・整理・管理支援</li>
-            <li>生前整理・老前整理の相談支援</li>
-            <li>引越し・施設入所に伴う荷物の整理・移動支援</li>
-        </ul>
-    </section>
-
-    <!-- 高齢者支援 -->
-    <section id="senior-support">
-        <h2 class="mb-3">👵 高齢者の日常生活支援</h2>
-        <ul>
-            <li>ゴミ出し・庭掃除・電球交換などの家事代行</li>
-            <li>通院・買い物の付き添い</li>
-            <li>郵便物チェック・不審電話ヒアリング</li>
-            <li>見守り訪問（話し相手）</li>
-            <li>スマホ・テレビ・Wi-Fiの初期設定</li>
-            <li>書類・通帳・写真などの生活書類整理</li>
-        </ul>
-    </section>
+<div class="text-center my-4">
+    <a href="#daily" class="btn btn-outline-secondary mx-1">暮らし</a>
+    <a href="#documents" class="btn btn-outline-secondary mx-1">書類</a>
+    <a href="#outdoor" class="btn btn-outline-secondary mx-1">おでかけ</a>
+    <a href="#emotional" class="btn btn-outline-secondary mx-1">気持ち</a>
+    <a href="#future" class="btn btn-outline-secondary mx-1">将来</a>
+    <a href="#realestate" class="btn btn-outline-secondary mx-1">不動産</a>
 </div>
+
+<!-- セクション：暮らし -->
+    <div class="row">
+        <div id="daily" class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/icon_home.png" class="card-img-top" alt="家アイコン">
+                    <div class="card-body">
+                        <h3 class="text-primary"><i class="bi bi-house-fill"></i>暮らしのこと</h3>
+                            <ul>
+                                <li>電球交換・ゴミ出しなどの軽作業</li>
+                                <li>庭掃除や部屋の片付け</li>
+                                <li>買い物や薬の受け取り代行</li>
+                            </ul>
+                    </div>
+            </div>
+    </div>
+
+<!-- 書類 -->
+        <div id="documents" class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/icon_text.png" class="card-img-top" alt="書類アイコン">
+                <div class="card-body">
+                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>書類のこと</h3>
+                    <ul>
+                        <li>郵便物のチェック・仕分け</li>
+                        <li>通帳・重要書類・写真の整理</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!-- おでかけ -->
+        <div id="outdoor" class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/icon_shopping.png" class="card-img-top" alt="買い物アイコン">
+                <div class="card-body">
+                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>おでかけ</h3>
+                    <ul>
+                        <li>病院や役所への付き添い</li>
+                        <li>バス・電車の乗り方サポート</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!-- 気持ち -->
+        <div id="emotional" class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/icon_hart.png" class="card-img-top" alt="気持ちアイコン">
+                <div class="card-body">
+                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>気持ちのこと</h3>
+                    <ul>
+                        <li>話し相手訪問（見守り）</li>
+                        <li>詐欺防止のための電話・郵便チェック</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!-- 将来 -->
+        <div id="future" class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/icon_future.png" class="card-img-top" alt="未来アイコン">
+                <div class="card-body">
+                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>将来のこと</h3>
+                    <ul>
+                        <li>老前整理・生前整理の支援</li>
+                        <li>施設入所時の荷物整理や移動</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!-- 不動産 -->
+        <div id="realestate" class="col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/icon_estate.png" class="card-img-top" alt="不動産アイコン">
+                <div class="card-body">
+                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>不動産のこと</h3>
+                    <ul>
+                        <li>遺品整理・相続書類の初期支援</li>
+                        <li>空き家の売却・簡易査定サポート（宅建士対応）</li>
+                        <li>管理・賃貸・売買の方向性相談</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+
+</section>
+
+<!--<div class="container my-5">-->
+
+<!--    &lt;!&ndash; 不動産関連 &ndash;&gt;-->
+<!--    <section id="real-estate" class="mb-5">-->
+<!--        <h2 class="mb-3">🏠 不動産に関するご相談</h2>-->
+<!--        <ul>-->
+<!--            <li>遺品整理の手伝い（仕分け・処分・清掃）</li>-->
+<!--            <li>相続に関する初期相談（専門家紹介・書類整理）</li>-->
+<!--            <li>空き家・実家などの売却相談・現地調査サポート</li>-->
+<!--            <li>不動産の簡易査定・整理・管理支援</li>-->
+<!--            <li>生前整理・老前整理の相談支援</li>-->
+<!--            <li>引越し・施設入所に伴う荷物の整理・移動支援</li>-->
+<!--        </ul>-->
+<!--    </section>-->
+
+<!--    &lt;!&ndash; 高齢者支援 &ndash;&gt;-->
+<!--    <section id="senior-support">-->
+<!--        <h2 class="mb-3">👵 高齢者の日常生活支援</h2>-->
+<!--        <ul>-->
+<!--            <li>ゴミ出し・庭掃除・電球交換などの家事代行</li>-->
+<!--            <li>通院・買い物の付き添い</li>-->
+<!--            <li>郵便物チェック・不審電話ヒアリング</li>-->
+<!--            <li>見守り訪問（話し相手）</li>-->
+<!--            <li>スマホ・テレビ・Wi-Fiの初期設定</li>-->
+<!--            <li>書類・通帳・写真などの生活書類整理</li>-->
+<!--        </ul>-->
+<!--    </section>-->
+<!--</div>-->
+
+<div class="text-center mt-5">
+    <a href="#" class="btn btn-outline-primary">トップへ戻る</a>
+</div>
+
 
 <div th:replace="fragments/footer :: footer"></div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
