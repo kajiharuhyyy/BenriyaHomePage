@@ -13,7 +13,7 @@
 <section class="bg-light text-center py-5">
     <div class="container">
         <img th:src="@{/images/hero.png}" alt="便利屋ヒーロー" class="img-fluid mb-4" style="max-height: 400px;">
-        <h1 class="display-5 fw-bold">まごころ便</h1>
+        <h1 class="display-5 fw-bold">江南てのひらサポート</h1>
         <p class="lead">不動産のお悩みから日常生活のお困りごとまですぐに対応します!</p>
         <a th:href="@{/contact}" class="btn btn-primary btn-lg mt-3">お問合せはこちら</a>
     </div>
@@ -22,7 +22,7 @@
 <section class="container py-5">
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
-            <h2 class="text-center mb-4">まごころ便って、どんなサービス？</h2>
+            <h2 class="text-center mb-4">どんなサービスをしてくれるの？</h2>
             <p class="lead text-center">
                 「こんなこと頼めるかな？」を安心して相談できる、<br>便利屋です。<br>
                 1時間1,000円で日常のお困りごとをお手伝いします。
@@ -68,6 +68,64 @@
     <a th:href="@{/request}" class="btn btn-success btn-lg me-3" > 🧾まずは資料請求！</a>
     <a th:href="@{/contact}" class="btn btn-primary btn-lg">📬　依頼はこちらから</a>
 </div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">よくあるご質問</h2>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                    Q. どのエリアで利用できますか？
+                </button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    現在、江南市内および隣接する尾張地域でサービスを提供しています。詳しくはお電話でご確認ください。
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="q2">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                Q. 予約はどのくらい前にすればいいですか？
+            </button>
+        </h2>
+        <div id="a2" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                3日前までのご予約が望ましいですが、緊急の場合はできる限り対応いたしますので、まずはご相談ください。
+            </div>
+        </div>
+    </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q3">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                    Q. キャンセルはできますか？
+
+                </button>
+            </h2>
+            <div id="a3" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    前日までのキャンセルは無料です。<br>
+                    当日キャンセルの場合は、お電話でご確認ください。
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="q4">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
+                    Q. どんなスタッフが来ますか？
+                </button>
+            </h2>
+            <div id="a4" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    研修を受けた地域在住のスタッフが伺います。身分証明書を携帯していますので、ご確認いただけます。<br>
+                    女性スタッフをご希望の場合はお申し付けください。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 
