@@ -93,4 +93,9 @@ public class PageController {
         model.addAttribute("name",form.getName());
         return "request_result";
     }
+
+    @GetMapping("/faq")
+    public String showFaqPage() {
+        return "faq";
+    }
 }
