@@ -5,11 +5,11 @@ import jakarta.validation.constraints.NotBlank;
 
 public class RequestForm {
 
-    @NotBlank(message = "お名前を入力してください")
+    @NotBlank(message = "お名前を入力してください!")
     private String  name;
 
-    @NotBlank(message = "メールアドレスを入力してください")
-    @Email(message = "メールアドレスの形式が正しくありません")
+    @NotBlank(message = "メールアドレスを入力してください!")
+    @Email(message = "メールアドレスの形式が正しくありません!")
     private  String  email;
 
     public String getName() { return name; }
