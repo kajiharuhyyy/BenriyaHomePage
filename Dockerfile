@@ -1,16 +1,15 @@
-FROM eclipse-temurin:17-jdk
-
+FROM openjdk:17-jdk-slim as build
 WORKDIR /app
 
+# Gradle Wrapper 用ファイルをコピー
 COPY gradlew .
-COPY gradle/ gradle/
-COPY build.gradle .
-COPY settings.gradle .
+COPY gradle gradle
 
-RUN chmod +x gradlew
-
+# ソースコードをコピー
 COPY . .
 
-RUN ./gradlew build -x test
+# 実行権限付与（忘れがち）
+RUN chmod +x gradlew
 
-CMD ["java", "-jar", "build/libs/homepage-0.0.1-SNAPSHOT.jar"]
+# 依存関係ダウンロードとビルド
+RUN ./gradlew build -x test
