@@ -8,9 +8,10 @@ services:
       - key: JAVA_VERSION
         value: 21
       - key: JDBC_URL
-        value: jdbc:postgresql://dpg-xxxxxx/tenohira_db  # ←RenderのDB設定に合わせて変更
+        value: jdbc:postgresql://dpg-d1vpr97diees73bu3bjg-a.oregon-postgres.render.com/tenohira_db
       - key: DB_USERNAME
-        value: your_db_username
+        value: tenohira_db_user
       - key: DB_PASSWORD
-        value: your_db_password
+        value: QiEyc7gvXMUcD0r7pdXNP6dCprD6ueU0
+
 
