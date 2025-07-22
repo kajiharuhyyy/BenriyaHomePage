@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: benriya-homepage
+    env: java
+    buildCommand: "./gradlew build -x test"
+    startCommand: "java -jar build/libs/homepage-0.0.1-SNAPSHOT.jar"
+    envVars:
+      - key: JAVA_VERSION
+        value: 21
+      - key: JDBC_URL
+        value: jdbc:postgresql://dpg-xxxxxx/tenohira_db  # ←RenderのDB設定に合わせて変更
+      - key: DB_USERNAME
+        value: your_db_username
+      - key: DB_PASSWORD
+        value: your_db_password
+
