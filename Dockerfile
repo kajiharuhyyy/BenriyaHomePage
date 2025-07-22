@@ -14,4 +14,4 @@ RUN chmod +x ./gradlew
 RUN ./gradlew build -x test
 
 # JARファイルの名前に合わせて変更
-CMD ["java", "-jar", "build/libs/homepage-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "build/libs/app.jar"]
