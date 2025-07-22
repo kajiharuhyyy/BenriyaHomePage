@@ -1,15 +1,17 @@
-FROM openjdk:17-jdk-slim as build
+# JDK 21 ベースイメージを使う
+FROM eclipse-temurin:21-jdk
+
+# 作業ディレクトリ作成
 WORKDIR /app
 
-# Gradle Wrapper 用ファイルをコピー
-COPY gradlew .
-COPY gradle gradle
-
-# ソースコードをコピー
+# ホスト側のファイルをコンテナにコピー
 COPY . .
 
-# 実行権限付与（忘れがち）
-RUN chmod +x gradlew
+# Gradle Wrapper の実行権限を与える
+RUN chmod +x ./gradlew
 
-# 依存関係ダウンロードとビルド
+# ビルド（テストをスキップ）
 RUN ./gradlew build -x test
+
+# JARファイルの名前に合わせて変更
+CMD ["java", "-jar", "build/libs/homepage-0.0.1-SNAPSHOT.jar"]
