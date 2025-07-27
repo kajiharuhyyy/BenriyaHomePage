@@ -1,81 +1,96 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Q&A</title>
-    <link th:href="@{/css/style.css}" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Q&A | 江南てのひらサポート</title>
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div th:replace="fragments/header :: header">&nbsp;</div>
+<div th:replace="fragments/header :: header"></div>
 
 <div class="container my-5">
-  <h2 class="text-center mb-4">よくあるご質問</h2>
+  <h1 class="text-center mb-4">よくあるご質問</h1>
 
   <div class="accordion" id="faqAccordion">
 
+    <!-- Q1 -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="faq1">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1Content" aria-expanded="true" aria-controls="faq1Content">
-        Q. どのエリアでご利用できますか？
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq1Content" aria-expanded="true" aria-controls="faq1Content">
+          Q. どのエリアでご利用できますか？
         </button>
       </h2>
-      <div id="faq1Content" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+      <div id="faq1Content" class="accordion-collapse collapse show" aria-labelledby="faq1"
+           data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          A. 現在、江南市内および隣接する尾張地域でサービスを提供しています。詳しくはお電話でご確認ください。
+          現在、江南市内および隣接する尾張地域でサービスを提供しています。<br>
+          詳しくは <a th:href="@{/contact}">お問い合わせ</a> ください。
         </div>
+      </div>
     </div>
-</div>
 
+    <!-- Q2 -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="faq2">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2Content" aria-expanded="true" aria-controls="faq2Content">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq2Content" aria-expanded="false" aria-controls="faq2Content">
           Q. 予約はどのくらい前にすればいいですか？
         </button>
       </h2>
-      <div id="faq2Content" class="accordion-collapse collapse show" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+      <div id="faq2Content" class="accordion-collapse collapse" aria-labelledby="faq2"
+           data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          A. 3日前までのご予約が望ましいですが、緊急の場合はできる限り対応いたしますので、まずはご相談ください。
+          3日前までのご予約が望ましいですが、<br>
+          緊急の場合はできる限り対応いたします。まずはご相談ください。
         </div>
       </div>
     </div>
 
+    <!-- Q3 -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="faq3">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3Content" aria-expanded="true" aria-controls="faq3Content">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq3Content" aria-expanded="false" aria-controls="faq3Content">
           Q. キャンセルはできますか？
         </button>
       </h2>
-      <div id="faq3Content" class="accordion-collapse collapse show" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+      <div id="faq3Content" class="accordion-collapse collapse" aria-labelledby="faq3"
+           data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          A. 前日までのキャンセルは無料です。<br>
-          当日キャンセルの場合は、お電話でご確認ください。
+          前日までのキャンセルは無料です。<br>
+          当日キャンセルの場合は、お電話にてご確認ください。
         </div>
       </div>
     </div>
 
+    <!-- Q4 -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="faq4">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4Content" aria-expanded="true" aria-controls="faq4Content">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq4Content" aria-expanded="false" aria-controls="faq4Content">
           Q. どんなスタッフが来ますか？
         </button>
       </h2>
-      <div id="faq4Content" class="accordion-collapse collapse show" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+      <div id="faq4Content" class="accordion-collapse collapse" aria-labelledby="faq4"
+           data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          研修を受けた地域在住のスタッフが伺います。身分証明書を携帯していますので、ご確認いただけます。<br>
-          女性スタッフをご希望の場合はお申し付けください。
+          研修を受けた地域在住のスタッフが訪問します。<br>
+          身分証明書を携帯していますのでご安心ください。<br>
+          女性スタッフをご希望の場合はご予約時にお伝えください。
         </div>
       </div>
     </div>
+
+  </div>
+
+  <div class="text-center mt-5">
+    <a th:href="@{/contact}" class="btn btn-primary btn-lg">📬 お問い合わせはこちら</a>
   </div>
 </div>
 
-
-<div class="text-center mt-4">
-  <a th:href="@{/contact}" class="btn btn-primary btn-lg">📬 お問い合わせはこちら</a>
-</div>
-<div th:replace="fragments/footer :: footer">&nbsp;</div>
-
+<div th:replace="fragments/footer :: footer"></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

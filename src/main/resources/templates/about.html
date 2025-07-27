@@ -1,54 +1,35 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>事業紹介　|  まごころ便</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<div th:replace="fragments/header :: header"></div>
-
-<div class="container mt-5">
-    <h1 class="text-center mb-4">事業紹介</h1>
-    <p class="text-center"><strong>あなたのお困りごと、まずは相談してください!</strong></p>
-</div>
-
 <section class="container py-5">
     <h2 class="text-center mb-4">サービス一覧</h2>
 
-<div class="text-center my-4">
-    <a href="#daily" class="btn btn-outline-secondary mx-1">暮らし</a>
-    <a href="#documents" class="btn btn-outline-secondary mx-1">書類</a>
-    <a href="#outdoor" class="btn btn-outline-secondary mx-1">おでかけ</a>
-    <a href="#emotional" class="btn btn-outline-secondary mx-1">気持ち</a>
-    <a href="#future" class="btn btn-outline-secondary mx-1">将来</a>
-    <a href="#realestate" class="btn btn-outline-secondary mx-1">不動産</a>
-</div>
+    <div class="text-center my-4">
+        <a href="#daily" class="btn btn-outline-secondary mx-1">暮らし</a>
+        <a href="#documents" class="btn btn-outline-secondary mx-1">書類</a>
+        <a href="#outdoor" class="btn btn-outline-secondary mx-1">おでかけ</a>
+        <a href="#emotional" class="btn btn-outline-secondary mx-1">安心・見守り</a>
+        <a href="#future" class="btn btn-outline-secondary mx-1">将来準備</a>
+        <a href="#realestate" class="btn btn-outline-secondary mx-1">不動産</a>
+    </div>
 
-<!-- セクション：暮らし -->
     <div class="row">
         <div id="daily" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_home.png" class="card-img-top" alt="家アイコン">
-                    <div class="card-body">
-                        <h3 class="text-primary"><i class="bi bi-house-fill"></i>暮らしのこと</h3>
-                            <ul>
-                                <li>電球交換・ゴミ出しなどの軽作業</li>
-                                <li>庭掃除や部屋の片付け</li>
-                                <li>買い物や薬の受け取り代行</li>
-                            </ul>
-                    </div>
+                <div class="card-body">
+                    <h3 class="text-primary"><i class="bi bi-lightbulb"></i> 暮らしのこと</h3>
+                    <ul>
+                        <li>電球交換・ゴミ出しなどの軽作業</li>
+                        <li>庭掃除や部屋の片付け</li>
+                        <li>買い物や薬の受け取り代行</li>
+                    </ul>
+                </div>
             </div>
-    </div>
+        </div>
 
-<!-- 書類 -->
         <div id="documents" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_text.png" class="card-img-top" alt="書類アイコン">
                 <div class="card-body">
-                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>書類のこと</h3>
+                    <h3 class="text-primary"><i class="bi bi-file-earmark-text"></i> 書類整理</h3>
                     <ul>
                         <li>郵便物のチェック・仕分け</li>
                         <li>通帳・重要書類・写真の整理</li>
@@ -57,12 +38,11 @@
             </div>
         </div>
 
-<!-- おでかけ -->
         <div id="outdoor" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_shopping.png" class="card-img-top" alt="買い物アイコン">
                 <div class="card-body">
-                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>おでかけ</h3>
+                    <h3 class="text-primary"><i class="bi bi-person-walking"></i> おでかけサポート</h3>
                     <ul>
                         <li>病院や役所への付き添い</li>
                         <li>バス・電車の乗り方サポート</li>
@@ -71,12 +51,11 @@
             </div>
         </div>
 
-<!-- 気持ち -->
         <div id="emotional" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_hart.png" class="card-img-top" alt="気持ちアイコン">
                 <div class="card-body">
-                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>気持ちのこと</h3>
+                    <h3 class="text-primary"><i class="bi bi-chat-dots"></i> 安心・見守り</h3>
                     <ul>
                         <li>話し相手訪問（見守り）</li>
                         <li>詐欺防止のための電話・郵便チェック</li>
@@ -85,12 +64,11 @@
             </div>
         </div>
 
-<!-- 将来 -->
         <div id="future" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_future.png" class="card-img-top" alt="未来アイコン">
                 <div class="card-body">
-                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>将来のこと</h3>
+                    <h3 class="text-primary"><i class="bi bi-calendar-check"></i> 将来準備</h3>
                     <ul>
                         <li>老前整理・生前整理の支援</li>
                         <li>施設入所時の荷物整理や移動</li>
@@ -99,12 +77,11 @@
             </div>
         </div>
 
-<!-- 不動産 -->
         <div id="realestate" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_estate.png" class="card-img-top" alt="不動産アイコン">
                 <div class="card-body">
-                    <h3 class="text-primary"><i class="bi bi-house-fill"></i>不動産のこと</h3>
+                    <h3 class="text-primary"><i class="bi bi-building"></i> 不動産のこと</h3>
                     <ul>
                         <li>遺品整理・相続書類の初期支援</li>
                         <li>空き家の売却・簡易査定サポート（宅建士対応）</li>
@@ -113,8 +90,7 @@
                 </div>
             </div>
         </div>
-</div>
-
+    </div>
 </section>
 
 <section class="container my-5">
@@ -140,13 +116,30 @@
     <p class="text-muted text-center">※出張費・資材費などは別途ご相談</p>
 </section>
 
+<section class="container my-5">
+    <h2 class="text-center mb-4">アクセス</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h5>所在地</h5>
+            <p>〒483-8051<br>愛知県江南市尾崎町上田７番地</p>
+
+            <h5>連絡先</h5>
+            <p>メール: <a href="mailto:info@tenohira-support.jp">info@tenohira-support.jp</a></p>
+            <p>営業時間: 平日 9:00～18:00（土日祝休）</p>
+        </div>
+        <div class="col-md-6">
+            <div class="ratio ratio-4x3">
+                <iframe
+                        src="https://www.google.com/maps?q=江南市尾崎町上田７番地&output=embed"
+                        width="100%" height="100%" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <div class="text-center mt-5">
-    <a href="#" class="btn btn-outline-primary">トップへ戻る</a>
+    <a href="/" class="btn btn-outline-primary">トップへ戻る</a>
 </div>
-
-
-<div th:replace="fragments/footer :: footer"></div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

@@ -1,9 +1,20 @@
 <!-- fragments/footer.html -->
 <div th:fragment="footer">
-    <footer class="bg-light text-center text-muted py-3 mt-5">
+    <footer class="bg-light text-center text-muted py-4 mt-5 border-top">
         <div class="container">
-            <small>© 2025 magokoro. All rights reserved.</small>
+            <p class="mb-2 fw-bold text-dark">📞 お問い合わせ：<a href="tel:09012345678" class="text-decoration-none">090-6582-5548</a></p>
+            <p class="mb-2">✉️ メール：<a href="mailto:contact@tenohira-support.jp" class="text-decoration-none">info@tenohira-benri.com</a></p>
+            <p class="mb-2">営業時間：365日　24時間対応</p>
+            <p class="mb-2">所在地：江南市尾崎町上田７番地</p>
+            <div class="mb-3">
+                <a href="https://line.me/R/ti/p/your-line-id" target="_blank" class="btn btn-success btn-sm me-2">
+                    LINEで相談
+                </a>
+                <a th:href="@{/contact}" class="btn btn-outline-primary btn-sm">
+                    お問い合わせフォーム
+                </a>
+            </div>
+            <small>© 2025 てのひらサポート. All rights reserved.</small>
         </div>
     </footer>
 </div>
-

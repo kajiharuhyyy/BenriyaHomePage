@@ -2,74 +2,72 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>まごころ便</title>
+    <title>江南てのひらサポート</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <style>
+        .hero-lead {
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+        .cta-button {
+            font-size: 1.2rem;
+            padding: 0.8em 2em;
+            margin: 1em 0;
+        }
+    </style>
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
 
 <section class="bg-light text-center py-5">
     <div class="container">
-        <img th:src="@{/images/hero.png}" alt="便利屋ヒーロー" class="img-fluid mb-4" style="max-height: 400px;">
-        <h1 class="display-5 fw-bold">江南てのひらサポート</h1>
-        <p class="lead">不動産のお悩みから日常生活のお困りごとまですぐに対応します!</p>
-        <a th:href="@{/contact}" class="btn btn-primary btn-lg mt-3">お問合せはこちら</a>
+        <img th:src="@{/images/hero.png}" alt="便利屋ヒーロー" class="img-fluid mb-4" style="max-height: 360px;">
+        <h1 class="display-5 fw-bold">てのひらサポート</h1>
+        <p class="hero-lead">“ちょっと困った”をその場で解決する訪問サービスです。</p>
+        <p class="lead">電球交換から相続相談まで、日常の不安やお困りごとをサポート。</p>
+        <a th:href="@{/contact}" class="btn btn-primary btn-lg cta-button">📞 今すぐ相談する</a>
     </div>
 </section>
 
 <section class="container py-5">
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-            <h2 class="text-center mb-4">どんなサービスをしてくれるの？</h2>
-            <p class="lead text-center">
-                「こんなこと頼めるかな？」を安心して相談できる、<br>便利屋です。<br>
-                1時間1,000円で日常のお困りごとをお手伝いします。
-            </p>
-            <div class="text-center mt-4">
-                <a th:href="@{/about}" class="btn btn-primary btn-lg">サービス内容を見る</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="container my-5">
+    <h2 class="text-center mb-4">サービス紹介</h2>
     <div class="row text-center">
         <div class="col-md-6">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm border-primary">
                 <div class="card-body">
-                    <h4 class="card-title">🏠 不動産に関するご相談</h4><br>
-                    <h5>不動産のお悩み相談してください！</h5><br>
-                    <p class="card-text">
-                        遺品整理、相続相談、空き家の売却、不動産の簡易査定、生前整理、引越しサポートなど。
-                    </p>
-                    <a th:href="@{'/about#real-estate'}" class="btn btn-outline-primary">詳しく見る</a>
+                    <h4 class="card-title text-primary">🟦 日常サポート</h4>
+                    <ul class="list-unstyled mt-3">
+                        <li>・電球交換・家具移動</li>
+                        <li>・買い物・通院の付き添い</li>
+                        <li>・見守り・話し相手・スマホ設定</li>
+                    </ul>
+                    <a th:href="@{'/services#senior-support'}" class="btn btn-outline-primary mt-3">詳しく見る</a>
                 </div>
             </div>
         </div>
         <div class="col-md-6 mt-4 mt-md-0">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm border-success">
                 <div class="card-body">
-                    <h4 class="card-title">👵 高齢者の生活支援</h4><br>
-                    <h5>皆さまの生活をサポートします！</h5><br>
-                    <p class="card-text">
-                        ゴミ出し、電球交換、付き添い、見守り、詐欺防止、スマホ設定、書類整理など軽作業サポート。
-                    </p>
-                    <a th:href="@{'/services#senior-support'}" class="btn btn-outline-success">詳しく見る</a>
+                    <h4 class="card-title text-success">🟩 専門相談対応</h4>
+                    <ul class="list-unstyled mt-3">
+                        <li>・遺品整理・生前整理</li>
+                        <li>・空き家・相続相談</li>
+                        <li>・リフォーム・簡易査定</li>
+                    </ul>
+                    <a th:href="@{'/about#real-estate'}" class="btn btn-outline-success mt-3">詳しく見る</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="text-center mt-5">
+        <a th:href="@{/request}" class="btn btn-success btn-lg me-3">🧾 まずは資料請求</a>
+        <a th:href="@{/contact}" class="btn btn-primary btn-lg">📬 依頼はこちら</a>
+    </div>
 </section>
 
-<div class="text-center mt-4">
-    <a th:href="@{/request}" class="btn btn-success btn-lg me-3" > 🧾まずは資料請求！</a>
-    <a th:href="@{/contact}" class="btn btn-primary btn-lg">📬　依頼はこちらから</a>
-</div>
-
-<div class="container my-5">
+<section class="container my-5">
     <h2 class="text-center mb-4">よくあるご質問</h2>
     <div class="accordion" id="faqAccordion">
         <div class="accordion-item">
@@ -123,14 +121,15 @@
                 </div>
             </div>
         </div>
+        <div th:replace="fragments/faq :: faqContent"></div>
     </div>
+</section>
+
+<div class="text-center mb-5">
+    <a th:href="@{/contact}" class="btn btn-primary btn-lg cta-button">📞 お問合せ・ご相談はこちら</a>
 </div>
 
-
-
-
 <div th:replace="fragments/footer :: footer"></div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
