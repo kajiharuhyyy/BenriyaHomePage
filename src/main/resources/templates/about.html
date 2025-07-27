@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>サービス紹介 - てのひらサポート</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ヘッダー -->
+<div th:replace="~{fragments/header :: header}"></div>
+
+<!-- サービス一覧 -->
 <section class="container py-5">
     <h2 class="text-center mb-4">サービス一覧</h2>
 
@@ -11,6 +25,7 @@
     </div>
 
     <div class="row">
+        <!-- 暮らし -->
         <div id="daily" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_home.png" class="card-img-top" alt="家アイコン">
@@ -25,6 +40,7 @@
             </div>
         </div>
 
+        <!-- 書類 -->
         <div id="documents" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_text.png" class="card-img-top" alt="書類アイコン">
@@ -38,6 +54,7 @@
             </div>
         </div>
 
+        <!-- おでかけ -->
         <div id="outdoor" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_shopping.png" class="card-img-top" alt="買い物アイコン">
@@ -51,6 +68,7 @@
             </div>
         </div>
 
+        <!-- 安心・見守り -->
         <div id="emotional" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_hart.png" class="card-img-top" alt="気持ちアイコン">
@@ -64,6 +82,7 @@
             </div>
         </div>
 
+        <!-- 将来準備 -->
         <div id="future" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_future.png" class="card-img-top" alt="未来アイコン">
@@ -77,6 +96,7 @@
             </div>
         </div>
 
+        <!-- 不動産 -->
         <div id="realestate" class="col-sm-6 col-md-4 mb-4">
             <div class="card h-100 shadow-sm">
                 <img src="/images/icon_estate.png" class="card-img-top" alt="不動産アイコン">
@@ -93,6 +113,7 @@
     </div>
 </section>
 
+<!-- 料金 -->
 <section class="container my-5">
     <h2 class="text-center mb-4">料金の目安</h2>
     <table class="table table-bordered text-center">
@@ -116,6 +137,7 @@
     <p class="text-muted text-center">※出張費・資材費などは別途ご相談</p>
 </section>
 
+<!-- アクセス -->
 <section class="container my-5">
     <h2 class="text-center mb-4">アクセス</h2>
     <div class="row">
@@ -139,7 +161,14 @@
     </div>
 </section>
 
-
-<div class="text-center mt-5">
+<!-- トップへ戻る -->
+<div class="text-center mt-5 mb-5">
     <a href="/" class="btn btn-outline-primary">トップへ戻る</a>
 </div>
+
+<!-- フッター -->
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
