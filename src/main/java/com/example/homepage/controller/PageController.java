@@ -37,6 +37,11 @@ public class PageController {
         return "about";
     }
 
+    @GetMapping("/price")
+    public String price() {
+        return "price";
+    }
+
     @GetMapping("/contact")
     public String contactForm(Model model) {
         model.addAttribute("contactForm", new ContactForm());
