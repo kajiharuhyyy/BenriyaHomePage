@@ -65,7 +65,7 @@ public class PageController {
                 + "郵便番号: " + contactForm.getPostcode() + "\n"
                 + "メッセージ:\n" + contactForm.getMessage();
 
-        mailService.sendContactMail("kajiharu0921@gmail.com", subject, body);
+        mailService.sendContactMail("info@tenohira-benri.com", subject, body);
 
         model.addAttribute("name",contactForm.getName());
         model.addAttribute("email",contactForm.getEmail());
