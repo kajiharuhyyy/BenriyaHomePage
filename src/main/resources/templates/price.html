@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>料金案内 | 江南てのひらサポート</title>
+  <link th:href="@{/css/style.css}" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<section class="container my-5">
+  <h2 class="text-center mb-4">料金の目安</h2>
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+    <tr>
+      <th>サービス内容</th>
+      <th>料金</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>日常生活のサポート（掃除・買い物など）</td>
+      <td>1時間 1,000円〜</td>
+    </tr>
+    <tr>
+      <td>不動産関連の相談・調査</td>
+      <td>内容に応じてお見積り</td>
+    </tr>
+    </tbody>
+  </table>
+  <p class="text-muted text-center">※出張費・資材費などは別途ご相談</p>
+</section>
+
+<section class="container my-5">
+  <h2 class="text-center mb-4">初回トライアル実施中！</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="alert alert-warning text-center">
+        <h5>開業記念キャンペーン</h5>
+        <p class="mb-1">✨ 初回お試し価格：<strong>¥1,500（税込）</strong></p>
+        <p class="mb-1">お一人様1回限り、<strong>2025年9月30日まで</strong></p>
+        <p class="mb-1">※チラシをご提示ください</p>
+        <p>通常1時間：<strong>¥3,000〜</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="text-center mt-5">
+    <a th:href="@{/contact}" class="btn btn-primary btn-lg">📬 お問い合わせはこちら</a>
+  </div>
+</div>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
