@@ -1,9 +1,10 @@
 package com.example.homepage.service;
 
-import com.example.homepage.util.EnvService;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,15 +13,20 @@ public class MailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    @Autowired
-    private EnvService envService;
-
     public void sendContactMail(String to, String subject, String text) {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom(envService.get("tenohirasapoto@gmail.com"));
-        message.setTo(to);
-        message.setSubject(subject);
-        message.setText(text);
-        mailSender.send(message);
+        try {
+            MimeMessage message = mailSender.createMimeMessage();
+            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+
+            helper.setFrom("tenohirasapoto@gmail.com"); // Gmailアドレス
+            helper.setTo(to);                        // ユーザーに送信
+            helper.setBcc("info@tenohira-benri.com");  // 👈 BCCで自分にも送る（通知）
+            helper.setSubject(subject);
+            helper.setText(text, false);
+
+            mailSender.send(message);
+        } catch (MessagingException e) {
+            throw new RuntimeException("メールの送信に失敗しました", e);
+        }
     }
 }
