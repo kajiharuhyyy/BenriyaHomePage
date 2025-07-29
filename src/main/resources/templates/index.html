@@ -8,17 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .hero-section {
-            background: linear-gradient(to right, #e0f7fa, #ffffff);
-            padding: 60px 0;
+            position: relative;
+            background-image: url('/images/bg_support_illustration.png'); /* あなたのイラストに置き換えてください */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 70vh;
+        }
+
+        .hero-section .overlay {
+            background: rgba(255, 255, 255, 0.8); /* 少し白で透過して文字を読みやすく */
+            height: 100%;
+            padding: 2rem;
             text-align: center;
         }
-        .hero-section img {
-            max-height: 280px;
-        }
-        .hero-section h1 {
-            font-size: 2.8rem;
-            color: #00796b;
-        }
+
         .service-card {
             background-color: #ffffff;
             border: 1px solid #ccc;
@@ -39,15 +43,15 @@
 <body>
 <div th:replace="~{fragments/header :: header}"></div>
 
-<!-- ヒーローセクション -->
-<section class="hero-section">
-    <div class="container">
-        <img th:src="@{/images/logo.png}" alt="訪問支援イメージ" class="img-fluid mb-4">
-        <h1>てのひらサポート</h1>
+<!-- トップセクション -->
+<section class="hero-section text-center text-dark">
+    <div class="overlay d-flex flex-column justify-content-center align-items-center">
+        <h1 class="display-5 fw-bold mb-3">てのひらサポート</h1>
         <p class="lead">江南市のちょっとした「困った」に、地域密着で迅速対応。</p>
-        <a th:href="@{/contact}" class="btn btn-primary btn-lg cta-button">📞 お問い合わせはこちら</a>
+        <a href="/contact" class="btn btn-primary mt-3 px-4 py-2">📞 お問い合わせはこちら</a>
     </div>
 </section>
+
 
 <!-- サービス紹介 -->
 <section class="container py-5">

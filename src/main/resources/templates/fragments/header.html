@@ -1,16 +1,25 @@
 <!-- fragments/header.html -->
-<header class="bg-light border-bottom py-3 mb-4">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center">
-    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-      <img src="/images/logo.png" alt="てのひらサポート ロゴ" height="50" class="me-2">
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="/images/logo.png" alt="てのひらサポート ロゴ" height="40" class="me-2">
       <span class="fs-4">てのひらサポート</span>
     </a>
-    <ul class="nav">
-      <li class="nav-item"><a href="/" class="nav-link link-dark">ホーム</a></li>
-      <li class="nav-item"><a href="/about" class="nav-link link-dark">サービス紹介</a></li>
-      <li class="nav-item"><a href="/price" class="nav-link link-dark">料金案内</a></li>
-      <li class="nav-item"><a href="/faq" class="nav-link link-dark">よくある質問</a></li>
-      <li class="nav-item"><a href="/contact" class="nav-link link-dark">お問い合わせ</a></li>
-    </ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarContent" aria-controls="navbarContent"
+            aria-expanded="false" aria-label="メニューを開く">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="/">ホーム</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">サービス紹介</a></li>
+        <li class="nav-item"><a class="nav-link" href="/price">料金案内</a></li>
+        <li class="nav-item"><a class="nav-link" href="/faq">よくある質問</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">お問い合わせ</a></li>
+        <li class="nav-item"><a class="nav-link" href="/request">資料請求</a></li>
+      </ul>
+    </div>
   </div>
-</header>
+</nav>
