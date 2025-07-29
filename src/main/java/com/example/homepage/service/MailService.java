@@ -17,7 +17,7 @@ public class MailService {
 
     public void sendContactMail(String to, String subject, String text) {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom(envService.get("SPRING_MAIL_USERNAME")); // .envから取得
+        message.setFrom(envService.get("tenohirasapoto@gmail.com"));
         message.setTo(to);
         message.setSubject(subject);
         message.setText(text);
